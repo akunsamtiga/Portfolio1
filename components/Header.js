@@ -39,7 +39,7 @@ export default function Header() {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <Image
-            src="/images/logos1.png"
+            src="/images/logos1.webp"
             alt="Sanzy Logo"
             width={32}
             height={32}

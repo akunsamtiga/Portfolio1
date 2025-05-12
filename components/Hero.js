@@ -35,7 +35,7 @@ export default function Hero() {
       <div className="flex flex-col items-center md:items-end text-center md:text-right">
         <div className="w-[220px] sm:w-[260px] h-[320px] sm:h-[380px] relative rounded-xl overflow-hidden shadow-xl mb-4">
           <Image
-            src="/images/profile1.jpg"
+            src="/images/profile1.webp"
             alt="Sanzy - UI/UX Designer"
             fill
             className="object-cover transition-opacity duration-500 ease-in-out"
