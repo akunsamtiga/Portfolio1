@@ -26,7 +26,7 @@ export default function Header() {
           )}>
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <img
+          <Image
             src="/images/logos1.png"
             alt="Logo"
             className={clsx(
