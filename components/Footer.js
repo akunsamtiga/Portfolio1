@@ -1,3 +1,5 @@
+'use client';
+
 import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 export default function Footer() {
@@ -10,47 +12,76 @@ export default function Footer() {
           <p className="text-sm text-gray-400">
             Sanzy is a Product Designer who builds impactful visual experiences with a strategic perspective and a hint of artificial intelligence (AI).
           </p>
+
           {/* Social Icons */}
-          <div className="flex gap-4 mt-4 text-gray-400">
-            <Facebook size={18} className="hover:text-white cursor-pointer" />
-            <Twitter size={18} className="hover:text-white cursor-pointer" />
-            <Instagram size={18} className="hover:text-white cursor-pointer" />
-            <Linkedin size={18} className="hover:text-white cursor-pointer" />
+          <div className="flex gap-4 mt-4 text-gray-400" aria-label="Social media links">
+            <a href="#" aria-label="Facebook" className="hover:text-white focus:outline-none focus:text-white">
+              <Facebook size={18} />
+            </a>
+            <a href="#" aria-label="Twitter" className="hover:text-white focus:outline-none focus:text-white">
+              <Twitter size={18} />
+            </a>
+            <a href="#" aria-label="Instagram" className="hover:text-white focus:outline-none focus:text-white">
+              <Instagram size={18} />
+            </a>
+            <a href="#" aria-label="LinkedIn" className="hover:text-white focus:outline-none focus:text-white">
+              <Linkedin size={18} />
+            </a>
           </div>
         </div>
 
         {/* Address */}
         <div>
           <h4 className="font-semibold text-sm mb-2">Address</h4>
-          <p className="text-sm text-gray-400">
+          <address className="not-italic text-sm text-gray-400">
             Techspace Park 75-91 Company, Indonesia Service across worldwide remote
-          </p>
+          </address>
         </div>
 
         {/* Email */}
         <div>
           <h4 className="font-semibold text-sm mb-2">Email Address</h4>
-          <p className="text-sm text-gray-400">hello@Sanzy.io</p>
-          <p className="text-sm text-gray-400">marketing@Sanzy.io</p>
+          <p className="text-sm text-gray-400">
+            <a href="mailto:hello@sanzy.io" className="hover:text-white">hello@sanzy.io</a>
+          </p>
+          <p className="text-sm text-gray-400">
+            <a href="mailto:marketing@sanzy.io" className="hover:text-white">marketing@sanzy.io</a>
+          </p>
         </div>
 
         {/* Phone */}
         <div>
           <h4 className="font-semibold text-sm mb-2">Phone Number</h4>
-          <p className="text-sm text-gray-400">0877 8787 4545</p>
-          <p className="text-sm text-gray-400">021 8989 6767</p>
+          <p className="text-sm text-gray-400">
+            <a href="tel:+6287787874545" className="hover:text-white">0877 8787 4545</a>
+          </p>
+          <p className="text-sm text-gray-400">
+            <a href="tel:+622189896767" className="hover:text-white">021 8989 6767</a>
+          </p>
         </div>
       </div>
 
       {/* Bottom Navigation */}
       <div className="max-w-6xl mx-auto border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="text-sm text-gray-500">© All rights reserved Sanzy</div>
-        <div className="flex gap-6 text-sm text-gray-400">
-          <a href="#" className="hover:text-white">Templates</a>
-          <a href="#" className="hover:text-white">Tools</a>
-          <a href="#" className="hover:text-white">Features</a>
-          <a href="#" className="hover:text-white">About Us</a>
+        <div className="text-sm text-gray-500 order-2 md:order-1">
+          © All rights reserved Sanzy
         </div>
+        <nav className="order-1 md:order-2" aria-label="Footer navigation">
+          <ul className="flex gap-6 text-sm text-gray-400">
+            <li>
+              <a href="#" className="hover:text-white focus:outline-none focus:text-white">Templates</a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white focus:outline-none focus:text-white">Tools</a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white focus:outline-none focus:text-white">Features</a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-white focus:outline-none focus:text-white">About Us</a>
+            </li>
+          </ul>
+        </nav>
       </div>
     </footer>
   );

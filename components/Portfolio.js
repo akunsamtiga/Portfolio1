@@ -1,12 +1,15 @@
+'use client';
+
 import Image from 'next/image';
+import { useState } from 'react';
 
 const portfolioItems = [
-  { src: '/images/portfolio6.jpg', span: 'col-span-2 row-span-2' }, // besar
-  { src: '/images/portfolio2.jpg', span: 'col-span-2 row-span-1' }, // lebar
-  { src: '/images/portfolio3.jpg', span: 'col-span-1 row-span-1' }, // normal
-  { src: '/images/portfolio4.jpg', span: 'col-span-1 row-span-2' }, // tinggi
-  { src: '/images/portfolio5.jpg', span: 'col-span-2 row-span-1' }, // lebar
-  { src: '/images/portfolio1.jpg', span: 'col-span-1 row-span-1' }, // normal
+  { src: '/images/portfolio6.webp', span: 'col-span-2 row-span-2' },
+  { src: '/images/portfolio2.webp', span: 'col-span-2 row-span-1' },
+  { src: '/images/portfolio3.webp', span: 'col-span-1 row-span-1' },
+  { src: '/images/portfolio4.webp', span: 'col-span-1 row-span-2' },
+  { src: '/images/portfolio5.webp', span: 'col-span-2 row-span-1' },
+  { src: '/images/portfolio1.webp', span: 'col-span-1 row-span-1' },
 ];
 
 export default function Portfolio() {
@@ -28,20 +31,33 @@ export default function Portfolio() {
       {/* Grid Portfolio with varied spans */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] max-w-5xl mx-auto">
         {portfolioItems.map((item, idx) => (
-          <div
-            key={idx}
-            className={`${item.span} relative rounded-xl overflow-hidden shadow-lg`}
-          >
-            <Image
-              src={item.src}
-              alt={`Portfolio ${idx + 1}`}
-              layout="fill"
-              objectFit="cover"
-              className="transition-transform duration-300 group-hover:scale-105"
-            />
-          </div>
+          <PortfolioItem key={idx} item={item} index={idx} />
         ))}
       </div>
     </section>
+  );
+}
+
+// Memisah ke komponen terpisah untuk lazy load & placeholder
+function PortfolioItem({ item, index }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  return (
+    <div className={`${item.span} relative rounded-xl overflow-hidden shadow-lg group`}>
+      {isLoading && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse z-10"></div>
+      )}
+      <Image
+        src={item.src}
+        alt={`Portfolio ${index + 1}`}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        className={`object-cover transition-transform duration-300 ${
+          isLoading ? 'scale-105 blur-md' : 'scale-100 blur-0'
+        }`}
+        loading="lazy"
+        onLoad={() => setIsLoading(false)}
+      />
+    </div>
   );
 }
