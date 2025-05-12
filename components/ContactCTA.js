@@ -8,7 +8,7 @@ export default function ContactCTA() {
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Judul */}
         <h2 className="text-3xl md:text-4xl font-semibold leading-tight text-center md:text-left">
-          Let's Connect There
+          Let&#39;s Connect There
         </h2>
 
         {/* Tombol Aksi */}
