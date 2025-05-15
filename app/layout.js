@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: 'Sanzy | Product Designer',
-  description: 'UI/UX Designer crafting intuitive digital experiences.',
+  title: 'Noelle',
+  description: 'Designer crafting intuitive digital experiences.',
 };
 
 export default function RootLayout({ children }) {
