@@ -15,7 +15,7 @@ export default function Hero() {
           Designer
         </h1>
         <p className="text-sm md:text-base text-gray-600 max-w-md mb-10">
-          Hi, I’m Sanzy, a UI/UX Designer crafting intuitive digital experiences.
+          Hi, I’m Noelle, a UI/UX Designer crafting intuitive digital experiences.
         </p>
 
         {/* Logo Perusahaan */}
@@ -36,7 +36,7 @@ export default function Hero() {
         <div className="w-[220px] sm:w-[260px] h-[320px] sm:h-[380px] relative rounded-xl overflow-hidden shadow-xl mb-4">
           <Image
             src="/images/profile1.webp"
-            alt="Sanzy - UI/UX Designer"
+            alt="Noelle - UI/UX Designer"
             fill
             className="object-cover transition-opacity duration-500 ease-in-out"
             onLoad={() => setImageLoaded(true)}
@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
         <p className="text-sm text-gray-500">
           Hi, I’m{' '}
-          <span className="font-semibold text-black">Sanzy</span>, a UI/UX Designer building{' '}
+          <span className="font-semibold text-black">Noelle</span>, a UI/UX Designer building{' '}
           <br className="hidden md:block" />
           immersive digital experiences.
         </p>

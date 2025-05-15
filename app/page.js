@@ -8,6 +8,7 @@ import Portfolio from '../components/Portfolio';
 import Testimonial from '../components/Testimonial';
 import ContactCTA from '../components/ContactCTA';
 import Footer from '../components/Footer';
+import Message from '../components/Message';
 
 export default function HomePage() {
   return (
@@ -21,6 +22,7 @@ export default function HomePage() {
       <Portfolio />
       <Testimonial />
       <ContactCTA />
+      <Message />
       <Footer />
     </>
   );

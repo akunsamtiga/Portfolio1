@@ -10,7 +10,7 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-lg mb-2">Sanzy</h3>
           <p className="text-sm text-gray-400">
-            Sanzy is a Product Designer who builds impactful visual experiences with a strategic perspective and a hint of artificial intelligence (AI).
+            Noelle is a Product Designer who builds impactful visual experiences with a strategic perspective and a hint of artificial intelligence (AI).
           </p>
 
           {/* Social Icons */}
@@ -64,7 +64,7 @@ export default function Footer() {
       {/* Bottom Navigation */}
       <div className="max-w-6xl mx-auto border-t border-gray-800 mt-12 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="text-sm text-gray-500 order-2 md:order-1">
-          © All rights reserved Sanzy
+          © All rights reserved Sanzystore
         </div>
         <nav className="order-1 md:order-2" aria-label="Footer navigation">
           <ul className="flex gap-6 text-sm text-gray-400">

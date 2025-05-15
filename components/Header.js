@@ -56,7 +56,7 @@ export default function Header() {
               scrolled ? 'text-white' : 'text-black'
             )}
           >
-            Sanzy
+            Noelle
           </span>
         </div>
 
